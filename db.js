@@ -1,0 +1,20 @@
+
+const { Client }  = require("pg");
+
+const { getDatabaseUri }= require("./lifetracker-api/config")
+
+
+
+
+
+const db = new Client({ connectionString: getDatabaseUri() })
+
+db.connect((err) => {
+  if (err) {
+    console.error("connection error", err.stack)
+  } else {
+    console.log("Successfully connected to postgres database!")
+  }
+})
+
+module.exports = db
