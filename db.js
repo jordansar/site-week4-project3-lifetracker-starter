@@ -1,5 +1,5 @@
 
-const { Client }  = require("pg");
+const { Client }  = require('pg')
 
 const { getDatabaseUri }= require("./lifetracker-api/config")
 

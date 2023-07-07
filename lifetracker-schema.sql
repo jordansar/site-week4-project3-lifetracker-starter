@@ -7,8 +7,8 @@ CREATE TABLE users (
   first_name TEXT NOT NULL,
   last_name  TEXT NOT NULL,
   email      TEXT NOT NULL UNIQUE CHECK (position('@' IN email) > 1),
-  created_at TIMESTAMP NOT NULL DEFAULT NOW(),
-  updated_at TIMESTAMP NOT NULL DEFAULT NOW()
+  created_at TIMESTAMP DEFAULT NOW(),
+  updated_at TIMESTAMP DEFAULT NOW()
 
 );
 
@@ -21,3 +21,10 @@ CREATE TABLE nutrition (
     user_id     INTEGER NOT NULL,
     created_at  TIMESTAMP NOT NULL DEFAULT NOW()
 )
+
+
+CREATE TABLE sleep (
+  id SERIAL PRIMARY KEY,
+  sleeptime TIMESTAMP NOT NULL,
+  waketime  TIMESTAMP NOT NULL,
+);
