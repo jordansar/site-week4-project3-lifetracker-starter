@@ -10,7 +10,7 @@ router.use(express.json())
 
 
 // make a post for this
-router.get("/nutrition", security.requireAuthenticatedUser, async function (req, res, next) {
+router.get("/me", security.requireAuthenticatedUser, async function (req, res, next) {
   try {
     const { email } = res.locals.user
     const user = await User.fetchUserByEmail(email)
@@ -22,10 +22,24 @@ router.get("/nutrition", security.requireAuthenticatedUser, async function (req,
 
 
 
-router.post("/sleep", security.requireAuthenticatedUser, async function (req, res, next) {
+router.post("/sleep", async function (req, res, next) {
   try {
+    // const something = await User.fetchUserByEmail(email)
     const user = await User.sleep(req.body)
-    return res.status(200).json({ user })
+    return res.status(200).json(user)
+  } catch (error) {
+    next(error)
+  }
+})
+
+
+router.post("/getSleep", async function (req, res, next) {
+  try {
+
+    console.log("id in here?" ,req.body)
+    const userSleeps = await User.getSleep(req.body.id)
+    console.log("sleeps to return" , userSleeps)
+    return res.status(200).json(userSleeps)
   } catch (error) {
     next(error)
   }
@@ -37,9 +51,9 @@ router.post("/sleep", security.requireAuthenticatedUser, async function (req, re
 
 
 
-
 router.post("/login", async function (req, res, next) {
   try {
+    console.log("putting in ", req.body)
     const user = await User.login(req.body)
     console.log("user ", user)
     return res.status(200).json({ user })

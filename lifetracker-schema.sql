@@ -1,4 +1,5 @@
 
+
 /* Creating a table for users using sql lang*/
 CREATE TABLE users (
   id         SERIAL PRIMARY KEY,
@@ -12,6 +13,7 @@ CREATE TABLE users (
 
 );
 
+
 /* Creating a nutrition table */
 CREATE TABLE nutrition (
     id          SERIAL PRIMARY KEY,
@@ -20,11 +22,12 @@ CREATE TABLE nutrition (
     image_url   VARCHAR(200) NOT NULL,
     user_id     INTEGER NOT NULL,
     created_at  TIMESTAMP NOT NULL DEFAULT NOW()
-)
+);
 
 
 CREATE TABLE sleep (
   id SERIAL PRIMARY KEY,
   sleeptime TIMESTAMP NOT NULL,
-  waketime  TIMESTAMP NOT NULL,
+  waketime  TIMESTAMP NOT NULL
 );
+

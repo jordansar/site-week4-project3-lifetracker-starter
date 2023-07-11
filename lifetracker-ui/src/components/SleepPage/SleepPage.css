@@ -4,3 +4,15 @@
 .SleepPage .button button {
   flex: 1;
 }
+
+
+.sleepGrid{
+  margin-top: 20px;
+  background-color: lightgreen ;
+
+margin-bottom: 50px;
+
+padding: 10px;
+
+border-radius: 2%;
+}

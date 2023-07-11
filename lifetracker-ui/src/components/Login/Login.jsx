@@ -37,15 +37,17 @@ export default function Login ({ setAppState ,setToken, handleLogin, isLogged, s
         setErrors((e) => ({ ...e, form: null }))
     
         try {
-          console.log("form", form)
+        
           let res = await axios.post(`http://localhost:3001/auth/login`, form)
           
      
           if (res?.data) {
+            // console.log("id in here for login", res.data.user.id)
             setAppState(res.data)
             setIsLogged(true)
-            navigate("/activity")
+            navigate("/")
             localStorage.setItem("token", res.data.user.token)
+            localStorage.setItem("id", res.data.user.id)
             // console.log(res.data.user.token)
             // console.log('token below!')
             setToken(res.data.user.token)

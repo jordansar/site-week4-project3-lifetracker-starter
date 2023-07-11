@@ -10,6 +10,7 @@ import './App.css'
 import { useState, useEffect } from 'react'
 import ExercisePage from '../ExercisePage/ExercisePage'
 import SleepPage from '../SleepPage/SleepPage'
+import ActivityPage from '../ActivityPage/ActivityPage'
 
 
 
@@ -58,6 +59,7 @@ const handleLogout = () => {
       <Route path='/' element={<Home/>}/>
       <Route path='/login' element={<Login setAppState={setAppState} setToken={setToken} setIsLogged={setIsLogged} />}/>
       <Route path='/register' element={<Register setAppState={setAppState} />}/>
+      <Route path='/activity' element={ <ActivityPage/>}/>
       <Route path='/nutrition' element={<NutritionPage/>}/>
       <Route path='/exercise' element= {<ExercisePage/>}/>
       <Route path='/sleep' element={<SleepPage/>}/>

@@ -186,6 +186,20 @@ return user;
 }
 
 
+static async getSleep(id){
+
+const result = await db.query(
+  `SELECT sleeptime, waketime FROM sleep WHERE id=$1`,
+  [id]
+)
+
+const sleeps = result.rows
+
+return sleeps;
+
+}
+
+
 
 
 
@@ -208,7 +222,9 @@ return user;
   static async getUserByEmail(email) {
     console.log("email: ",email)
     const result = await db.query(
-      `SELECT username,
+      `SELECT 
+              id,
+              username,
               email, 
               password,
               first_name AS "firstName",
