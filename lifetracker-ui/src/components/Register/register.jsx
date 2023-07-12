@@ -103,7 +103,7 @@ export default function Register({ setAppState }) {
               }
 
 
-        } catch (error) {
+        } catch (err) {
             
             console.log(err)
             const message = err?.response?.data?.error?.message
