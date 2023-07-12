@@ -12,14 +12,14 @@ const SECRET_KEY = process.env.SECRET_KEY || "secret-dev"
 function getDatabaseUri () {
     const dbUser = process.env.DATABASE_USER || "postgres"
     const dbPass = process.env.DATABASE_PASS ? encodeURI(process.env.DATABASE_PASS) : "postgres"
-    const dbHost = process.env.DATABASE_HOSTED_URL || "localhost"
+    const dbHost = process.env.DATABASE_URL || "localhost"
     const dbPort = process.env.DATABASE_PORT || 5432
     const dbName = process.env.DATABASE_NAME || "lifetracker"
 
     //if the DATABASE_URL environment variable is provided, use that
     //otherwise create our own db connection string
 
-    return process.env.DATABASE_URL || `postgres://${dbUser}:${dbPass}@${dbHost}:${dbPort}/${dbName}`
+    return process.env.DATABASE_HOSTED_URL || `postgres://${dbUser}:${dbPass}@${dbHost}:${dbPort}/${dbName}`
 }
 
 
