@@ -19,6 +19,16 @@ By the end of this project you will be able to...
 - [ ] Employ `useEffect` and `useState` hooks to manage application state on the frontend
 - [ ] Store user-authenticated JWT tokens in the browser's local storage for persisted authentication
 
+
+
+
+
+<a href="https://www.loom.com/share/f6a655be830d467d8a922b8faa93b904">
+    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/f6a655be830d467d8a922b8faa93b904-with-play.gif">
+  </a>
+
+
+
 ## Application Features
 
 ### Core Features
