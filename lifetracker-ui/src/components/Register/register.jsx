@@ -19,7 +19,7 @@ export default function Register({ setAppState }) {
     })
 
 
-    const registerUrl = "https://my-lifetracker-frontend.onrender.com/auth/register";
+    const registerUrl = "https://my-lifetracker-backend.onrender.com/auth/register";
 
 
 
