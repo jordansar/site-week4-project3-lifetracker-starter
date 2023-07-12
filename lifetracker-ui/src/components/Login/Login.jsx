@@ -38,7 +38,7 @@ export default function Login ({ setAppState ,setToken, handleLogin, isLogged, s
     
         try {
         
-          let res = await axios.post(`http://localhost:3001/auth/login`, form)
+          let res = await axios.post(`https://my-lifetracker-backend.onrender.com/auth/login`, form)
           
      
           if (res?.data) {

@@ -40,7 +40,7 @@ export default function SleepPage() {
         // }
 
         try {
-              let res = await axios.post(`http://localhost:3001/auth/getSleep`, formData)
+              let res = await axios.post(`https://my-lifetracker-backend.onrender.com/auth/getSleep`, formData)
               console.log(res.data)
          
             //   if (res?.data) {
@@ -68,7 +68,7 @@ export default function SleepPage() {
     
         try {
         //   console.log("form", formData)
-          let res = await axios.post(`http://localhost:3001/auth/sleep`, formData)
+          let res = await axios.post(`https://my-lifetracker-backend.onrender.com/auth/sleep`, formData)
           
      
           if (res?.data) {
