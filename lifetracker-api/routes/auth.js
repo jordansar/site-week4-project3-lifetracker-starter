@@ -36,9 +36,9 @@ router.post("/sleep", async function (req, res, next) {
 router.post("/getSleep", async function (req, res, next) {
   try {
 
-    console.log("id in here?" ,req.body)
+    // console.log("id in here?" ,req.body)
     const userSleeps = await User.getSleep(req.body.id)
-    console.log("sleeps to return" , userSleeps)
+    console.log("sleeps to return" , {userSleeps})
     return res.status(200).json(userSleeps)
   } catch (error) {
     next(error)
