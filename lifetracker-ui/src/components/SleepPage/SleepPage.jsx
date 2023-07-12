@@ -70,13 +70,13 @@ export default function SleepPage() {
         //   console.log("form", formData)
           let res = await axios.post(`https://my-lifetracker-backend.onrender.com/auth/sleep`, formData)
           
+          setDisplayData([...displayData, formData ])
+          console.log("here's the display", displayData)
      
           if (res?.data) {
             setSleepState(res.data)
             // console.log(res.data)
-            setDisplayData([...displayData, formData ])
 
-            console.log(displayData)
 
             
           } else {
