@@ -31,8 +31,7 @@ export default function SleepPage() {
     
 
 
-    async function getSleeps (e) {
-        e.preventDefault()
+    async function getSleeps () {
         const localStorageCheck = localStorage.getItem("token")
         console.log("token in here? ", localStorage.getItem("id"))
         if(localStorageCheck)
