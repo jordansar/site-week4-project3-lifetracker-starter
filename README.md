@@ -22,6 +22,10 @@ By the end of this project you will be able to...
 
 
 
+Deployed Website link: "https://my-lifetracker-frontend.onrender.com"
+
+
+
 
 <a href="https://www.loom.com/share/f6a655be830d467d8a922b8faa93b904">
     <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/f6a655be830d467d8a922b8faa93b904-with-play.gif">
