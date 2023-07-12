@@ -7,12 +7,12 @@ require("dotenv").config()
 
 const PORT = process.env.PORT ? Number(process.env.PORT) : 3001
 const IS_TESTING = process.env.NODE_ENV === "test"
-const SECRET_KEY = (process.env.SECRET_KEY).SECRET_KEY || "secret-dev"
+const SECRET_KEY = (process.env.SECRET_KEY) || "secret-dev"
 
 function getDatabaseUri () {
     const dbUser = process.env.DATABASE_USER || "postgres"
     const dbPass = process.env.DATABASE_PASS ? encodeURI(process.env.DATABASE_PASS) : "postgres"
-    const dbHost = process.env.DATABASE_HOST || "localhost"
+    const dbHost = process.env.DATABASE_HOSTED_URL || "localhost"
     const dbPort = process.env.DATABASE_PORT || 5432
     const dbName = process.env.DATABASE_NAME || "lifetracker"
 
