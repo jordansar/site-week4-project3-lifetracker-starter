@@ -76,7 +76,7 @@ export default function SleepPage() {
           if (res?.data) {
               setSleepState(res.data)
               setDisplayData([...displayData, formData])
-              console.log("here's the display", displayData)
+            //   console.log("here's the display", displayData)
               // console.log(res.data)
 
 
