@@ -79,6 +79,7 @@ export default function SleepPage() {
             //   console.log("here's the display", displayData)
               // console.log(res.data)
 
+            console.log(displayData)
 
             
           } else {
