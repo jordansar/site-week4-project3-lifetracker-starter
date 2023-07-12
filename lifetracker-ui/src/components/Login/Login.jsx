@@ -45,7 +45,7 @@ export default function Login ({ setAppState ,setToken, handleLogin, isLogged, s
             // console.log("id in here for login", res.data.user.id)
             setAppState(res.data)
             setIsLogged(true)
-            navigate("/")
+            navigate("/activity")
             localStorage.setItem("token", res.data.user.token)
             localStorage.setItem("id", res.data.user.id)
             // console.log(res.data.user.token)
