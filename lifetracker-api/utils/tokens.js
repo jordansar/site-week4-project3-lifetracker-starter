@@ -1,4 +1,4 @@
-const db = require("../../db")
+const db = require("../db")
 const jwt = require('jsonwebtoken')
 const SECRET_KEY = require('../config')
 
